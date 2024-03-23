@@ -1,0 +1,3 @@
+# this is my job portal website
+
+This project is a job portal website that connects job seekers with employers. It allows job seekers to create profiles, upload resumes, and search for jobs based on various criteria such as location, industry, and job type. Employers can create profiles, post job listings, and search for potential candidates. The website includes features such as job alerts, messaging between job seekers and employers, and a user-friendly interface for easy navigation. Built with Django , html , css , this project aims to simplify the job search process for both job seekers and employers.
