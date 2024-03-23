@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block "main" %}
+
+
+        
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Job Detail</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Job Detail</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        
+
+        <!-- Job Detail Start -->
+        <div class="row">
+            {% for i in job %}
+            <div class="col-md-6">
+              <img src="{% static 'img/talentsync.jpg' %}"  height="300px" width="100%" class="card-img-top" alt="...">
+    
+    
+            </div>
+            <div class="col-md-6 mt-3 ">
+              <h5>Job details</h5><hr>
+              <p><strong>Job Name:</strong>{{i.title}}</p>
+              <p><strong>Category:</strong>{{i.cat}}</p>
+              <p><strong>Salary:</strong>{{i.location}}</p>
+              <p><strong>See Details:</strong>TalentSync Solutions</p>
+              {% comment %} <a href="/cart/{{i.id}}" class="anchor"><button class="btn btn-danger">Add to Cart</button></a>
+              <a href="cart.html" class="anchor"><button class="btn btn-danger">View Cart</button></a>
+              <a href="/home" class="anchor"><button class="btn btn-danger">Shop More</button></a> {% endcomment %}
+    
+    
+            </div>
+            {% endfor %}
+          </div>
+        {% comment %} </div>
+    </div> {% endcomment %}
+
+    
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center mb-5">
+                            <img class="flex-shrink-0 img-fluid border rounded" src="/static/img/com-logo-2.jpg" alt="" style="width: 80px; height: 80px;">
+                            <div class="text-start ps-4">
+                                <h3 class="mb-3">Marketing Manager</h3>
+                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Pune/Kolhapur, Maharashtra</span>
+                                <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time/Part Time</span>
+                                <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>15000-25000</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h4 class="mb-3">Job description</h4>
+                            <p> The Marketing Manager is responsible for developing and executing comprehensive marketing strategies. They oversee advertising, market research, 
+                            and budget management to enhance brand awareness and drive business growth. Collaboration with cross-functional teams ensures cohesive branding and effective communication.</p>
+                            <h4 class="mb-3">Responsibility</h4>
+                            <p>Develop and implement strategic marketing plans to achieve company objectives.
+                                Manage marketing campaigns across various channels, including digital, print, and social media.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Develop and implement strategic marketing plans to achieve company objectives.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Analyze market trends and competitor activity to identify opportunities for growth.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Manage and allocate budget effectively to maximize ROI and achieve marketing goals.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Oversee the creation and execution of marketing campaigns across various channels (digital, print, events, etc.).</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Collaborate with cross-functional teams to ensure alignment of marketing efforts with overall business objectives.</li>
+                            </ul>
+                            <h4 class="mb-3">Qualifications</h4>
+                            <p>Bachelor's degree in Marketing, Business Administration, Communications, or a related field; MBA or advanced degree preferred.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Bachelor's degree in Marketing, Business Administration, or a related field; MBA preferred.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Strong analytical skills, with the ability to interpret data and make strategic decisions.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Excellent communication and interpersonal skills, with the ability to collaborate effectively with internal teams and external partners.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Proven track record of successful marketing campaigns and initiatives</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>With at least 5 years of experience in a marketing management role.</li>
+                            </ul>
+                        </div>
+        
+                        <div class="">
+                            <h4 class="mb-4">Apply For The Job</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" class="form-control" placeholder="Your Email">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Portfolio Website">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="file" class="form-control bg-white">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" rows="5" placeholder="Coverletter"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Apply Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4">
+                        <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                            <h4 class="mb-4">Job Summery</h4>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Published On: 01 April, 2024</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Vacancy: 200 Position</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Job Nature: Full/Part Time</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Salary: 15000-25000</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Location: Pune/Kolhapur, India</p>
+                            <p class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Date Line: 01 April, 2024</p>
+                        </div>
+                        <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                            <h4 class="mb-4">Company Detail</h4>
+                            <p class="m-0">"International Hearts" is a global marketing agency specializing in comprehensive marketing solutions for businesses worldwide. With a diverse team of marketing experts, we offer strategic planning, creative campaigns, and digital marketing services to help our clients reach their target audiences effectively. Our company is committed to delivering innovative and impactful marketing strategies tailored to each client's unique needs, driving growth and success in the international marketplace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Job Detail End -->
+
+
+   
+{% endblock "main" %}
